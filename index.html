@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#c9c9c7" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101010'/%3E%3Cpath d='M11 32h42M32 11v42M17 17l30 30M47 17L17 47' stroke='%23f1f0eb' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <title>Launchpad Studios — Games & Films</title>
+  <meta name="description" content="Launchpad Studios is an independent studio creating video games and films." />
+
+  <meta property="og:title" content="Launchpad Studios — Games & Films" />
+  <meta property="og:description" content="Independent games and films." />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Launchpad Studios",
+    "sameAs":[
+      "https://store.steampowered.com/curator/46114731-Launchpad-Studios/"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoGame",
+    "name":"Baaad Trip",
+    "publisher":{"@type":"Organization","name":"Launchpad Studios"},
+    "author":{"@type":"Organization","name":"Launchpad Studios"},
+    "url":"https://store.steampowered.com/app/4637990/Baaad_Trip/"
+  }
+  </script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand magnetic" href="#home" aria-label="Launchpad Studios home">
+      Launchpad Studios<sup>®</sup>
+    </a>
+
+    <button class="brandmark magnetic" type="button" aria-label="Back to home" data-scroll="#home">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="nav-link magnetic" data-open="games">Games</button>
+      <button class="nav-link magnetic" data-open="films">Films</button>
+      <a class="nav-link magnetic" href="https://store.steampowered.com/curator/46114731-Launchpad-Studios/" target="_blank" rel="noreferrer">Steam ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div id="scene-wrap" aria-label="Interactive 3D Launchpad Studios sculpture">
+        <canvas id="scene"></canvas>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Independent studio / Games + Film</p>
+
+        <h1>
+          We build strange worlds.<br />
+          You decide where to enter.<span class="cursor-block" aria-hidden="true"></span>
+        </h1>
+
+        <div class="actions">
+          <button class="pill magnetic" data-open="games">Explore games <span>→</span></button>
+          <button class="pill magnetic" data-open="films">Explore films <span>→</span></button>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span>Launchpad Studios</span>
+        <span>Independent / Worldwide</span>
+        <span>© <span id="year"></span></span>
+      </div>
+
+      <button class="sound-toggle magnetic" id="motionToggle" aria-pressed="false" title="Reduce / enable 3D motion">
+        <span class="sound-icon">↯</span>
+        <span class="sound-label">motion</span>
+      </button>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="section-head">
+        <p>Selected work</p>
+        <p>Games / Films</p>
+      </div>
+
+      <button class="project-row project-open" data-open="game-detail" aria-label="Open Baaad Trip">
+        <span class="project-index">01</span>
+        <span class="project-title">BAAAD TRIP</span>
+        <span class="project-type">Video game / 2026</span>
+        <span class="project-arrow">↗</span>
+      </button>
+
+      <button class="project-row project-open" data-open="films" aria-label="Open Films">
+        <span class="project-index">02</span>
+        <span class="project-title">FILMS</span>
+        <span class="project-type">Coming later</span>
+        <span class="project-arrow">↗</span>
+      </button>
+
+      <footer>
+        <div>Launchpad Studios</div>
+      <div class="footer-links">
+        <a href="https://store.steampowered.com/curator/46114731-Launchpad-Studios/" target="_blank" rel="noreferrer">Steam ↗</a>
+          <a href="https://github.com/CHALENDI" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="panel-backdrop" id="panelBackdrop" hidden></div>
+
+  <aside class="panel" id="gamesPanel" aria-hidden="true" aria-label="Games">
+    <div class="panel-top">
+      <span>Games</span>
+      <button class="close magnetic" data-close aria-label="Close">×</button>
+    </div>
+    <div class="panel-body">
+      <p class="panel-kicker">01 / Current project</p>
+      <h2>Baaad Trip</h2>
+      <p class="panel-intro">
+        A chaotic co-op adventure about guiding a flock of unpredictable sheep home across dangerous terrain. Play solo or with up to four players.
+      </p>
+      <div class="panel-actions">
+        <a class="pill dark magnetic" href="https://store.steampowered.com/app/4637990/Baaad_Trip/" target="_blank" rel="noreferrer">Steam page <span>↗</span></a>
+        <button class="pill dark magnetic" data-open="game-detail">Project info <span>→</span></button>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="panel" id="filmsPanel" aria-hidden="true" aria-label="Films">
+    <div class="panel-top">
+      <span>Films</span>
+      <button class="close magnetic" data-close aria-label="Close">×</button>
+    </div>
+    <div class="panel-body">
+      <p class="panel-kicker">02 / Film work</p>
+      <h2>Films are coming.</h2>
+      <p class="panel-intro">
+        Film projects from Launchpad Studios will be announced here.
+      </p>
+      <div class="film-placeholder">
+        <span>Launchpad Studios</span>
+        <strong>UNTITLED / 00</strong>
+        <span>Film</span>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="panel detail-panel" id="gameDetailPanel" aria-hidden="true" aria-label="Baaad Trip project details">
+    <div class="panel-top">
+      <span>Baaad Trip</span>
+      <button class="close magnetic" data-close aria-label="Close">×</button>
+    </div>
+    <div class="panel-body">
+      <p class="panel-kicker">Game / Launchpad Studios</p>
+      <h2>Baaad Trip</h2>
+      <div class="detail-grid">
+        <div>
+          <span>Type</span>
+          <strong>Video Game</strong>
+        </div>
+        <div>
+          <span>Studio</span>
+          <strong>Launchpad Studios</strong>
+        </div>
+        <div>
+          <span>Platform</span>
+          <strong>PC / Steam</strong>
+        </div>
+        <div>
+          <span>Status</span>
+          <strong>11 Dec 2026</strong>
+        </div>
+        <div>
+          <span>Players</span>
+          <strong>1–4 player co-op</strong>
+        </div>
+        <div>
+          <span>Genre</span>
+          <strong>Action / Adventure</strong>
+        </div>
+      </div>
+      <a class="pill dark magnetic" href="https://store.steampowered.com/app/4637990/Baaad_Trip/" target="_blank" rel="noreferrer">View on Steam <span>↗</span></a>
+    </div>
+  </aside>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-line"></div>
+    <span>Launchpad Studios</span>
+  </div>
+
+  <script>
+    window.setTimeout(function () {
+      document.querySelector('#loader')?.classList.add('done');
+    }, 1400);
+  </script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
